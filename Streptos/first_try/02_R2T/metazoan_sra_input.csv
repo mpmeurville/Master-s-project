@@ -1,0 +1,30 @@
+oma_ids,species_ids,sra,type,layout
+SCHMA,Schistosoma mansoni,"ERR2185322	",mRNA,PAIRED
+CAPI1,Capitella sp. 1,"SRR5357812	",mRNA,SINGLE
+OTOGA,Otolemur garnettii,"SRR4444969	",mRNA,SINGLE
+MOUSE,Mus musculus,"SRR7688558	",mRNA,SINGLE
+DROMO,Drosophila mojavensis,"SRR3221678	",mRNA,SINGLE
+ANOCA,Anolis carolinensis,"SRR6337924	",mRNA,SINGLE
+TRISP,Trichinella spiralis,"SRR1963543	",mRNA,PAIRED
+XENTR,Xenopus tropicalis,"SRR6326666	",mRNA,PAIRED
+MEGSC,Megaselia scalaris,SRR629491,mRNA,PAIRED
+ACYPI,Acyrthosiphon pisum,"SRR7454531	",mRNA,PAIRED
+CAVPO,Cavia porcellus,SRR6411091,mRNA,PAIRED
+CRAGI,Crassostrea gigas,"ERR1758993	",mRNA,PAIRED
+PRIPA,Pristionchus pacificus,"ERR2652911	",mRNA,PAIRED
+TRICA,Tribolium castaneum,SRR7121106,mRNA,PAIRED
+BRAFL,Branchiostoma floridae,"DRR032680	",mRNA,SINGLE
+DROME,Drosophila melanogaster,"SRR7686984	",mRNA,PAIRED
+AEDAE,Aedes aegypti,"SRR7356190	",mRNA,PAIRED
+HUMAN,Homo sapiens,SRR7687787,mRNA,SINGLE
+STRPU,Strongylocentrotus purpuratus,"SRR6912799	",mRNA,PAIRED
+CIOSA,Ciona savignyi,"SRR6431991	",mRNA,PAIRED
+RATNO,Rattus norvegicus,"SRR7609647	",mRNA,PAIRED
+CIOIN,Ciona intestinalis,SRR6283065,mRNA,PAIRED
+CHICK,Gallus gallus,"SRR7615224	",mRNA,SINGLE
+CAEEL,Caenorhabditis elegans,"DRR101419	",mRNA,PAIRED
+PONAB,Pongo abelii,"SRR6225373	",mRNA,PAIRED
+PETMA,Petromyzon marinus,"SRR5312392	",mRNA,PAIRED
+AMPQE,Amphimedon queenslandica,"SRR6768518	",mRNA,PAIRED
+TRIAD,Trichoplax adhaerens,ERR2215729,mRNA,PAIRED
+NOMLE,Nomascus leucogenys,"SRR7232222	",gDNA,PAIRED
