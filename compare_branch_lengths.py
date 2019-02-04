@@ -21,12 +21,13 @@ os.chdir(path)
 
 
 tree1=Tree("DNA_tree_R2T_GTR+R7_alrtbb_clean.contree", format=0)
-tree2=Tree("DNA_tree_R2T_GTR+R7_alrtbb_Greub.contree", format=0)
+#tree2=Tree("DNA_tree_R2T_GTR+R7_alrtbb_Greub.contree", format=0)
+tree2=Tree("greub_rooted.nwk", format=0)# rooted the same way than the others
 #tree3=Tree("DNA_tree_R2T_GTR+R7_alrtbb_cross.contree", format=0)
 tree4=Tree("DNA_tree_R2T_GTR+R7_alrtbb_raw.contree", format=0)
 tree5=Tree("DNA_tree_R2T_GTR+R7_alrtbb_further.contree", format=0)
 
-
+### raw reads 16 references
 path= "C:/Users/marie/Documents/PdM/Saureus/SNP_comparison/snippy_comparison_raw_reads_MW2/R2T_pipeline"
 tree3=Tree("C:/Users/marie/Documents/PdM/Saureus/SNP_comparison/snippy_comparison_raw_reads_MW2/R2T_pipeline/tree_raw .contree", format=0)
 
@@ -181,8 +182,9 @@ t3ac1=tree3.get_common_ancestor([t3MRCAc1,"CHU13"])
 
 for child in t3MRCAc1.get_descendants():
     if child.name:
-    #print(child.name)
+        print(child.name)
         n_dist_t3_c1[("B", child.name)] = tree3.get_distance(t3MRCAc1,child)/max_dist_val[3][1]
+        n_dist_t3_c1[("B", "A")] = tree3.get_distance(t3MRCAc1,t3ac1)/max_dist_val[3][1]
 
 
 
@@ -259,7 +261,6 @@ df_c0p = df_c0p.transpose()
 
 df_c1 = pd.DataFrame([n_dist_t2_c1,n_dist_t1_c1, n_dist_t4_c1, n_dist_t3_c1, n_dist_t5_c1], index=labels)
 df_c1p = pd.DataFrame([n_dist_t2_c1,n_dist_t1_c1, n_dist_t3_c1, n_dist_t4_c1, n_dist_t5_c1], index=labels)
-
 df_c1p = df_c1p.transpose()
 
 
@@ -363,6 +364,9 @@ df_c1_clus_red= df_c1_clus
 df_c0_clus_red= df_c0_clus
 
 
+std=df_c1_clus_red.std(axis=0, skipna=None, level=None, ddof=1, numeric_only=None)
+
+
 df_c1_mean=df_c1_clus_red.mean()
 df_c0_mean=df_c0_clus_red.mean()
 
@@ -374,7 +378,7 @@ df4=pd.concat([df_c0_mean, df_c1_mean], axis=1)
 #df4=df4.iloc[::1].T
 df4=df4.iloc[::1]
 
-d1=df4.plot.bar(figsize=(15,5), color=('b', 'c'))
+d1=df4.plot.bar(figsize=(15,5), color=('b', 'c'), yerr=std)
 
 d1.set_xlabel("Trees", size = 18)
 d1.set_ylabel("Average normalized length ", size = 18)
